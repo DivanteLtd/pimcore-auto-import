@@ -25,13 +25,13 @@
   },
   "autoload": {
     "psr-4": {
-      "AutoImportBundle\\": "src/AutoImportBundle"
+      "Divante\\AutoImportBundle\\": "src/AutoImportBundle"
     }
   },
   "extra": {
     "pimcore": {
       "bundles": [
-        "AutoImportBundle\\AutoImportBundle"
+        "Divante\\AutoImportBundle\\AutoImportBundle"
       ]
     }
   }
