@@ -34,9 +34,9 @@ After installation open up Website settings and fill in:
 
 ![Website settings example](docs/img/website-settings.png?raw=true)
 
-From now on, all assets added to the configured folder will be used as an input to defined Import Definition.
+From now on, all assets added to the configured folder (`product` in example above) will be used as an input to defined Import Definition.
 Executable in Process Manager will be createad automatically, alongside with additional folder structure,
-as subfolders of defined in Website Settings (if needed):
+as subfolders of the one defined in Website Settings (if needed):
 - `/processing` - files being currently imported
 - `/done` - files sucessfully imported
 - `/error` - files which import ended with an error
