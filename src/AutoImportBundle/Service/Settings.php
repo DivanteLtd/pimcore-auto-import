@@ -45,7 +45,7 @@ class Settings
     /**
      * @return WebsiteSetting[]
      */
-    protected function getBundleWebsiteSettings(): array
+    public function getBundleWebsiteSettings(): array
     {
         $websiteSettingsListing = new Listing();
         $websiteSettings = $websiteSettingsListing->getSettings();

@@ -9,10 +9,15 @@ services:
     # if you need to do this, you can override this setting on individual services
     public: false
 
+  divante.auto_import.import_defintions:
+    public: true
+    class: Divante\AutoImportBundle\Service\ImportDefintions
+    calls:
+      - [setContainer, ['@service_container']]
 
   Divante\AutoImportBundle\EventListener\AssetEventListener:
     arguments:
-      - '@divante_importer.import_definitions_service.import_defintions'
+      - '@divante.auto_import.import_defintions'
 
     tags:
       - { name: kernel.event_listener, event: pimcore.asset.postAdd, method: onPostAdd }

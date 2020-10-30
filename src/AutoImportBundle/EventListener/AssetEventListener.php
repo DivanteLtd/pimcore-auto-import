@@ -3,8 +3,8 @@
 namespace Divante\AutoImportBundle\EventListener;
 
 use Divante\AutoImportBundle\AutoImportBundle;
+use Divante\AutoImportBundle\Service\ImportDefintions;
 use Divante\AutoImportBundle\Service\Settings;
-use Divante\ImporterBundle\ImportDefinitions\Service\ImportDefintions;
 use Pimcore\Event\Model\AssetEvent;
 use Pimcore\Log\ApplicationLogger;
 use Pimcore\Logger;

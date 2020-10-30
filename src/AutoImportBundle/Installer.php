@@ -47,7 +47,7 @@ class Installer extends AbstractInstaller
     public function isInstalled()
     {
         $settings = new Settings();
-        if (count($settings->getIntegrations()) > 0) {
+        if (count($settings->getBundleWebsiteSettings()) > 0) {
             return true;
         }
 
