@@ -22,7 +22,7 @@
   },
   "suggests": {
       "divanteltd/pimcoredevkit": ">=0.10"
-  }
+  },
   "autoload": {
     "psr-4": {
       "AutoImportBundle\\": "src/AutoImportBundle"
