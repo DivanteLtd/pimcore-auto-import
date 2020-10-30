@@ -1,0 +1,24 @@
+services:
+  # default configuration for services in *this* file
+  _defaults:
+    # automatically injects dependencies in your services
+    autowire: true
+    # automatically registers your services as commands, event subscribers, etc.
+    autoconfigure: true
+    # this means you cannot fetch services directly from the container via $container->get()
+    # if you need to do this, you can override this setting on individual services
+    public: false
+
+
+  Divante\AutoImportBundle\EventListener\AssetEventListener:
+    arguments:
+      - '@divante_importer.import_definitions_service.import_defintions'
+
+    tags:
+      - { name: kernel.event_listener, event: pimcore.asset.postAdd, method: onPostAdd }
+
+  Divante\AutoImportBundle\EventListener\ImportDefinitionsEventListener:
+    tags:
+      - { name: kernel.event_listener, event: data_definitions.import.success, method: onProcessingSuccess }
+      - { name: kernel.event_listener, event: data_definitions.import.failure, method: onProcessingFailure }
+      - { name: kernel.event_listener, event: import_definition.loading_data_failure, method: onProcessingFailure }

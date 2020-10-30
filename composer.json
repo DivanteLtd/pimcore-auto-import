@@ -1,0 +1,38 @@
+{
+  "name": "divanteltd/pimcore-auto-import",
+  "type": "pimcore-bundle",
+  "license": "GPL-3.0-or-later",
+  "description": "Auto Import runs Import Definitions automatically on created assets",
+  "keywords": [
+    "pimcore",
+    "pimcore-plugin"
+  ],
+  "homepage": "https://www.divante.com",
+  "authors": [
+    {
+      "name": "Jakub Płaskonka",
+      "email": "jplaskonka@divante.com",
+      "homepage": "https://www.kubaplas.pl/",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "w-vision/data-definitions": ">=3",
+    "dpfaffenbauer/process-manager": ">=2.5"
+  },
+  "suggests": {
+      "divanteltd/pimcoredevkit": ">=0.10"
+  }
+  "autoload": {
+    "psr-4": {
+      "AutoImportBundle\\": "src/AutoImportBundle"
+    }
+  },
+  "extra": {
+    "pimcore": {
+      "bundles": [
+        "AutoImportBundle\\AutoImportBundle"
+      ]
+    }
+  }
+}
